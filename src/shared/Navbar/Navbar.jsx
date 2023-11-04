@@ -5,7 +5,7 @@ const Navbar = () => {
 
   const navItems = <nav className="flex text-lg font-semibold  lg:flex-row flex-col space-x-3">
         <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/addProduct">Assignments</NavLink></li>
+        <li><NavLink to="/assignments">Assignments</NavLink></li>
         <li><NavLink to="/create assignment">Create Assignment</NavLink></li>
         <li><NavLink to="/my assignment">My Assignments</NavLink></li>
         

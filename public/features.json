@@ -1,0 +1,44 @@
+[
+    {
+        "service_id": "01",
+        "name": "Principles of Written English, Part 2",
+        "title": "Language",
+        "img": "https://i.ibb.co/JFv5LDW/masonry-03-400x400.jpg",
+        "price": "30.00"
+    },
+    {
+        "service_id": "02",
+        "name": "Entrepreneurship 101: Who is your customer?",
+        "title": "Marketing and SEO",
+        "img": "https://i.ibb.co/GQn2nM6/masonry-15-400x400.jpg",
+        "price": "40.00"
+    },
+    {
+        "service_id": "03",
+        "name": "Evaluating Social Programs",
+        "title": "Social",
+        "img": "https://i.ibb.co/NjmPDBg/masonry-06-400x400.jpg",
+        "price": "30.00"
+    },
+    {
+        "service_id": "04",
+        "name": "Principles of Written English, Part 1",
+        "title": "Language",
+        "img": "https://i.ibb.co/yhC84dN/masonry-04-400x400.jpg",
+        "price": "60.00"
+    },
+    {
+        "service_id": "05",
+        "name": "Introduction to Biomedical Imaging",
+        "title": "Medicine",
+        "img": "https://i.ibb.co/JFv5LDW/masonry-03-400x400.jpg",
+        "price": "45.00"
+    },
+    {
+        "service_id": "06",
+        "name": "Introduction to Computer Science",
+        "title": "Computers",
+        "img": "https://i.ibb.co/N7cv9TR/masonry-02-400x400.jpg",
+        "price": "67.00"
+    }
+]

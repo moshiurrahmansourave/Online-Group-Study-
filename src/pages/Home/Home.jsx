@@ -1,4 +1,5 @@
 import Banner from "../../shared/Banner/Banner";
+import Features from "../Features/Features";
 
 
 
@@ -6,7 +7,7 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <h3>this is home </h3>
+            <Features></Features>
         </div>
     );
 };
