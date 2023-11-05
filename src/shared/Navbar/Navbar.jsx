@@ -56,8 +56,8 @@ const Navbar = () => {
     
     <p className="text-3xl font-bold text-green-400">Study Butter</p>
     </Link>
-    <div className="lg:mt-5 mt-4  ml-4">
-    <input type="checkbox" onChange={handleToggle} className="toggle" />
+    <div className="lg:mt-5 mt-4 mb-2 ml-4">
+    <input type="checkbox" onChange={handleToggle} className="toggle toggle-xs" />
     </div>
   </div>
   <div className="navbar-center hidden lg:flex ">
@@ -66,6 +66,23 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
+  <div className=" mr-3 text-lg hidden lg:flex">
+      {
+        user && <p>{user?.displayName
+        }</p>
+      }
+    </div>
+
+    <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+        <div className="w-7 rounded-full">
+          {
+            user ?
+              <img src={user.photoURL} />
+              :
+              <img src="https://i.ibb.co/jLvgVST/user.png" alt="" />
+          }
+        </div>
+      </label>
   {
     user ? 
     <button onClick={handleSingOut} className="btn btn-sm bg-violet-500 text-white">sing Out</button>
