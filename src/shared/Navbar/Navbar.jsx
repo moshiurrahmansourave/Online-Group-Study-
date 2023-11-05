@@ -3,6 +3,7 @@ import './Navbar.css'
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 
+
 const Navbar = () => {
   const {user, logOut} = useContext(AuthContext);
 
@@ -52,7 +53,7 @@ const Navbar = () => {
     </div>
     <Link to="/" className="flex items-center">
     
-    <img className="w-20" src="https://i.ibb.co/JkLMsj9/pngtree-education-school-logo-design-learning-library-knowledge-vector-png-image-12898110.png" alt="" />
+    <img  className="w-20 rounded-3xl " src="https://i.ibb.co/JkLMsj9/pngtree-education-school-logo-design-learning-library-knowledge-vector-png-image-12898110.png" alt="" />
     
     <p className="text-3xl font-bold text-green-400">Study Butter</p>
     </Link>
