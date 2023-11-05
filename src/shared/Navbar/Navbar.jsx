@@ -1,7 +1,33 @@
 import { Link, NavLink } from "react-router-dom";
 import './Navbar.css'
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Navbar = () => {
+  const {user, logOut} = useContext(AuthContext);
+
+
+  const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light");
+
+  const handleToggle = e =>{
+    if(e.target.checked){
+      setTheme("dark");
+    } else{
+      setTheme("light")
+    }
+  }
+
+  useEffect(()=>{
+    localStorage.setItem("theme", theme);
+    const localTheme = localStorage.getItem("theme");
+    document.querySelector("html").setAttribute("data-theme", localTheme)
+  },[theme])
+
+  const handleSingOut = () =>{
+    logOut()
+    .then()
+    .catch()
+}
 
   const navItems = <nav className="flex text-lg font-semibold  lg:flex-row flex-col space-x-3">
         <li><NavLink to="/">Home</NavLink></li>
@@ -30,6 +56,9 @@ const Navbar = () => {
     
     <p className="text-3xl font-bold text-green-400">Study Butter</p>
     </Link>
+    <div className="lg:mt-5 mt-4  ml-4">
+    <input type="checkbox" onChange={handleToggle} className="toggle" />
+    </div>
   </div>
   <div className="navbar-center hidden lg:flex ">
     <ul className=" px-1">
@@ -37,7 +66,15 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <Link className="btn btn-sm text-green-400" to="/login">Login</Link>
+  {
+    user ? 
+    <button onClick={handleSingOut} className="btn btn-sm bg-violet-500 text-white">sing Out</button>
+    :
+    <Link to="/login">
+    <p className="btn btn-sm bg-violet-500 text-white">Login</p>
+    </Link>
+  
+  }
   </div>
 </div>
         </div>
