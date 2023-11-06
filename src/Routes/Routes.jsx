@@ -8,6 +8,7 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import PrivateRouts from "../routs/PrivateRouts";
 import AssignmentDet from "../pages/AssignmentDet/AssignmentDet";
+import Submitted from "../pages/Submitted/Submitted";
 
 
 const router = createBrowserRouter([
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
         {
           path:'/register',
           element:<Register></Register>
+        },
+        {
+          path:'/submitted',
+          element:<Submitted></Submitted>
         },
         {
           path:'assignmentdet/:id',
