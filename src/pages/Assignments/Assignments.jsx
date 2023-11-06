@@ -5,7 +5,8 @@ import { useState } from "react";
 
 const Assignments = () => {
 
-    const assignments = useLoaderData();
+    const loadAssignments = useLoaderData();
+    const [assignments, setAssignments] = useState(loadAssignments)
 
     const [fullData, setFullData] = useState(assignments);
     const [searchData, setSearchData] = useState(assignments);
@@ -46,7 +47,7 @@ const Assignments = () => {
                     </div>
                     <button
                         onClick={handleSearch}
-                        className="btn btn-outline rounded-none rounded-r-lg ">Search</button>
+                        className="btn  rounded-none  ">Search</button>
                 </div>
 
 
@@ -54,9 +55,11 @@ const Assignments = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                 {
-                    searchData.map(assignment => <AssignmentsCard
+                    searchData?.map(assignment => <AssignmentsCard
                         key={assignment._id}
                         assignment={assignment}
+                        assignments={assignments}
+                        setAssignments={setAssignments}
                     ></AssignmentsCard>)
                 }
             </div>

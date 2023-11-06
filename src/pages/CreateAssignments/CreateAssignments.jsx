@@ -12,15 +12,18 @@ const CreateAssignments = () => {
         e.preventDefault();
 
         const form = e.target;
+        const name = form.name.value;
         const title = form.title.value;
+        const pdf = form.pdf.value;
         const description = form.description.value;
         const marks = form.marks.value;
         const imgUrl = form.imgUrl.value;
         const quality = form.quality.value;
         const date = form.Date.value;
         const email = form.email.value;
+        const status = form.status.value;
 
-        const newCreator = {title, description, marks, imgUrl,quality, date, email}
+        const newCreator = {name,title,pdf, description, marks, imgUrl,quality, date, email,status}
         console.log(newCreator)
         //send data to the server
 
@@ -49,9 +52,17 @@ const CreateAssignments = () => {
 
            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 border  p-4 ">
           <div className=" gap-3">
+            <p className="text-xl font-bold underline">Your Name</p>
+             <input type="text" name="name" placeholder="Type here" className="input rounded-none input-bordered input-md w-full max-w-xs" required />
+          </div>
+          <div className=" gap-3">
             <p className="text-xl font-bold underline">Title</p>
              <input type="text" name="title" placeholder="Type here" className="input rounded-none input-bordered input-md w-full max-w-xs" required />
           </div>
+           <div className=" gap-3">
+            <p className="text-xl font-bold underline">Assignment pdf</p>
+             <input type="text" name="pdf" placeholder="Type here" className="input rounded-none input-bordered input-md w-full max-w-xs" required />
+           </div>
            <div className=" gap-3">
             <p className="text-xl font-bold underline">Description</p>
              <input type="text" name="description" placeholder="Type here" className="input rounded-none input-bordered input-md w-full max-w-xs" required />
@@ -79,6 +90,10 @@ const CreateAssignments = () => {
   <option>Normal</option>
   <option>Heard</option>
 </select>
+           <div className="flex items-center gap-1">
+            <h2 className="font-bold">Assignment Status:</h2>
+            <input type="text" name="status" value={"Pending"} />
+           </div>
            
            </div>
            <div className="flex justify-center">
