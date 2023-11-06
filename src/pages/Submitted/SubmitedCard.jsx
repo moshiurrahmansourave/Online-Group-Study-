@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 
@@ -48,7 +49,9 @@ const SubmitedCard = ({assignment}) => {
 
 
     <div className="card-actions justify-center">
+      <Link to={`/marking/${_id}`}>
       <button className="btn btn-sm bg-green-400 text-white">Give Mark</button>
+      </Link>
     </div>
   </div>
 </div>

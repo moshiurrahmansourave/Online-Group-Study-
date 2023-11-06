@@ -10,6 +10,7 @@ import PrivateRouts from "../routs/PrivateRouts";
 import AssignmentDet from "../pages/AssignmentDet/AssignmentDet";
 import Submitted from "../pages/Submitted/Submitted";
 import Update from "../pages/UpdateAssign/Update";
+import Marking from "../pages/Submitted/Marking";
 
 
 const router = createBrowserRouter([
@@ -47,6 +48,11 @@ const router = createBrowserRouter([
           path:'/submitted',
           element:<Submitted></Submitted>,
           
+        },
+        {
+          path:'/marking/:id',
+          element:<Marking></Marking>,
+          loader:({params}) => fetch(`http://localhost:5000/assignment/${params.id}`)
         },
         {
           path:'/update/:id',
