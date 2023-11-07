@@ -45,19 +45,16 @@ const Register = () => {
     }
 
     return (
-        <div>
-            <div>
-              <div className="lg:mb-96 mb-5 ">
-           
-           
-           <div className=" card p-4 w-96 glass mx-auto relative mt-8">
-           <div className="">
-           <div className="flex items-center justify-between">
-               <h2 className="card-title underline text-green-400">Sing up form</h2>
 
-               </div>
-               
-   <form onSubmit={handleSingUp}  className="">
+<div>
+            <div className="lg:mb-72 mb-5 flex justify-center mt-24 ">
+        <div className="card w-96 glass rounded-none ">
+            <div className="p-3">
+                <div className="flex items-center justify-between">
+                <h2 className="card-title">Login form</h2>
+                </div>
+                
+                <form onSubmit={handleSingUp}  className="">
        <div className="form-control">
            <label className="label">
                <span className="label-text">Name</span>
@@ -106,9 +103,12 @@ const Register = () => {
            </p>
        </div>
   </form>
-           </div>
-       </div>
-       </div>
+            </div>
+        </div>
+        <div >
+            <img className='h-full' src="https://i.ibb.co/2gWbmXH/a43637a8f717e4b104676ca7420641db.png" alt="" />
+          </div>
+          
         </div>
         </div>
     );

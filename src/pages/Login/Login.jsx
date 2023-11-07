@@ -53,8 +53,8 @@ const Login = () => {
 
     return (
         <div>
-            <div className="lg:mb-96 mb-5 ">
-        <div className="card w-96 glass mx-auto my-6 ">
+            <div className="lg:mb-72 mb-5 flex justify-center mt-24 ">
+        <div className="card w-96 glass rounded-none ">
             <div className="p-3">
                 <div className="flex items-center justify-between">
                 <h2 className="card-title">Login form</h2>
@@ -96,9 +96,13 @@ const Login = () => {
             </div> 
             
             </div>
-   </form>
+               </form>
             </div>
         </div>
+        <div >
+            <img className='h-full' src="https://i.ibb.co/2gWbmXH/a43637a8f717e4b104676ca7420641db.png" alt="" />
+          </div>
+          
         </div>
         </div>
     );

@@ -47,15 +47,18 @@ const AssignmentsCard = ({assignment,assignments,setAssignments}) => {
         }
       })
     }
+    const handlewarning = () =>{
+      Swal.fire("This is not your assignment");
+    }
     return (
         <div>
-            <div className="card flex flex-col lg:flex-row card-side rounded-2xl hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+            <div className="card flex flex-col  card-side border mb-10 rounded-2xl hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
   <figure>
-  <img src={imgUrl} alt="here is no image"/>
+  <img className="w-96" src={imgUrl} alt="here is no image"/>
     
     </figure>
   <div className="card-body space-y-3">
-    <h2 className="card-title">assignment name: {title}</h2>
+    <h2 className="card-title">assignment : {title}</h2>
     <h3><span className="font-bold">Assignment Quality:</span> {quality}</h3>
     <p ><span className="font-bold">Description: </span> {description}</p>
     <p ><span className=" font-bold">Mars:</span> {marks}</p>
@@ -81,7 +84,7 @@ const AssignmentsCard = ({assignment,assignments,setAssignments}) => {
     {  email == user?.email ?
         <button onClick={()=>handleDelete(_id)} className="btn btn-sm rounded-full bg-red-500 text-white text-sm">Delete</button>
         :
-        <button className="p-2 rounded-full bg-green-500 text-white text-sm">not your assignment</button>
+        <button onClick={handlewarning} className="btn btn-sm rounded-full bg-gray-500 text-white text-sm">Delete</button>
     }
     
   </div>

@@ -81,16 +81,17 @@ const Navbar = () => {
             user ?
               <img src={user.photoURL} />
               :
-              <img src="https://i.ibb.co/jLvgVST/user.png" alt="" />
+              // <img src="https://i.ibb.co/jLvgVST/user.png" alt="" />
+              ""
           }
         </div>
       </label>
   {
     user ? 
-    <button onClick={handleSingOut} className="btn btn-sm bg-violet-500 text-white">sing Out</button>
+    <button onClick={handleSingOut} className="btn btn-sm bg-green-500 text-white">sing Out</button>
     :
     <Link to="/login">
-    <p className="btn btn-sm bg-violet-500 text-white">Login</p>
+    <p className="btn btn-sm bg-green-500 text-white">Login</p>
     </Link>
   
   }

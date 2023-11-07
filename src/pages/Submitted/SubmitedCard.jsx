@@ -52,6 +52,7 @@ const SubmitedCard = ({assignment}) => {
       <Link to={`/marking/${_id}`}>
       <button className="btn btn-sm bg-green-400 text-white">Give Mark</button>
       </Link>
+      
     </div>
   </div>
 </div>

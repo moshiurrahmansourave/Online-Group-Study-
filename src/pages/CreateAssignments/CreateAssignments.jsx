@@ -97,7 +97,7 @@ const CreateAssignments = () => {
            
            </div>
            <div className="flex justify-center">
-           <input type="submit" value="Submit" className="btn  my-3" />
+           <input type="submit" value="Create Assignment" className="btn hover:bg-green-500 hover:text-white my-3" />
            </div>
            </form>
         </div>

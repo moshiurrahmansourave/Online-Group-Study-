@@ -1,15 +1,50 @@
-import { useLoaderData } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
+
 
 
 
 const Marking = () => {
 
-    const assignment = useLoaderData();
+
+
+  const [searchData, setSearchData] = useState();
+    const assignment = useLoaderData(searchData);
 
     const {title,email,status, _id, description, marks, imgUrl,quality,name,pdf, date} =assignment;
 
-
     
+
+    const handleStatusComplete = id =>{
+      console.log(id)
+      fetch(`http://localhost:5000/assignment/${id}`,{
+        method:'PATCH',
+        headers:{
+          'content-type': 'application/json'
+        },
+        body:JSON.stringify({status:'Complete'})
+      })
+      .then(res => res.json())
+      .then(data =>{
+        console.log(data);
+        if(data.modifiedCount > 0){
+          Swal.fire(
+            'Completed!',
+            'Your assignment has been Completed.',
+            'success')
+            
+          const remaining = assignment.filter(assignment => assignment._id != id);
+          const updated = assignment.find(assignment => assignment._id === id)
+          updated.status = 'Complete'
+          const newAssignment = [updated, ...remaining];
+          setSearchData(newAssignment)
+
+          
+
+        }
+      })
+    }
 
 
     return (
@@ -18,16 +53,19 @@ const Marking = () => {
   <div className=" grid grid-cols-1 py-9 lg:grid-cols-2 text-xl">
     
       <div className="card-body ">
-      <h1>status : <span className="text-red-500">{status}...</span></h1>
+      <h1>status:
+        <span className="font-bold"> {status}</span>
+       </h1>
 
 <div className="flex gap-3">
 <h2>Assignment Title: </h2>
 <span className="font-bold underline"> {title} </span>
 </div>
 
+
 <div className="flex gap-3">
 <h2>Examiner Name: </h2>
-<span className="font-bold underline"> {name} </span>
+<span className="font-bold underline"> {name} </span> 
 </div>
 
 <div className="flex gap-3">
@@ -61,6 +99,7 @@ const Marking = () => {
         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
       <form  className="card-body">
         <div className="form-control">
+          
           <label className="label">
             <span className="label-text">Mark Field</span>
           </label>
@@ -71,13 +110,17 @@ const Marking = () => {
           <label className="label">
             <span className="label-text">Examine Feedback</span>
           </label>
-          <textarea placeholder="Feedback" name="feedback" className="textarea textarea-bordered textarea-md w-full max-w-xs" ></textarea>
+          <textarea placeholder="Feedback" name="feedback" className="textarea textarea-bordered textarea-md w-full max-w-xs" required></textarea>
           
         </div>
         <div className="form-control mt-6">
-        <input type="submit" value="Give Mark" className="btn bg-green-500 text-white text-xl w-full my-7" />
+        
+        <input onClick={()=>handleStatusComplete(_id)} type="submit" value="Give marking" className="btn hover:bg-green-500 hover:text-white my-3" />
+        
+        
         </div>
       </form>
+      
     </div>
 
   </div>

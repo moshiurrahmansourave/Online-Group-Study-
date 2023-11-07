@@ -14,7 +14,7 @@ const Submitted = () => {
         .then(data => setSearchData(data))
     },[])
     // console.log(searchData)
-
+    
     return (
         <div>
             
