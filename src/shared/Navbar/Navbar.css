@@ -5,7 +5,7 @@ nav a{
 nav li a.active{
    
     text-decoration: underline;
-    text-decoration-color: rgb(8, 219, 43);
-    color: rgb(15, 219, 8);
+    text-decoration-color: rgb(219, 103, 8);
+    color: rgb(219, 85, 8);
    
 }

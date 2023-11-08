@@ -67,26 +67,30 @@ const AssignmentsCard = ({assignment,assignments,setAssignments}) => {
     <p>{email}</p>
     </div>
     <div className="flex gap-4">
-    <Link to={`/assignmentdet/${_id}`}>
-    
-    <button className="btn btn-sm rounded-full bg-green-500 text-white text-sm">vew detials</button></Link>
-
-    {
-      email == user?.email ?
-      <Link to={`/update/${_id}`}>
-    <button className="btn btn-sm rounded-full bg-green-500 text-white text-sm">update</button>
-    </Link>:
-     ""
-    }
-
-    
-    </div>
     {  email == user?.email ?
         <button onClick={()=>handleDelete(_id)} className="btn btn-sm rounded-full bg-red-500 text-white text-sm">Delete</button>
         :
         <button onClick={handlewarning} className="btn btn-sm rounded-full bg-gray-500 text-white text-sm">Delete</button>
     }
+
+    {
+      email == user?.email ?
+      <Link to={`/update/${_id}`}>
+    <button className="btn btn-sm rounded-full bg-orange-500 text-white text-sm">update</button>
+    </Link>
+    :
     
+    <button onClick={handlewarning} className="btn btn-sm rounded-full bg-gray-500 text-white text-sm">update</button>
+    
+    }
+
+    
+    </div>
+   
+    
+    <Link to={`/assignmentdet/${_id}`}>
+    
+    <button className="btn w-full btn-sm rounded-full bg-orange-500 text-white text-sm">vew detials</button></Link>
   </div>
 </div>
 

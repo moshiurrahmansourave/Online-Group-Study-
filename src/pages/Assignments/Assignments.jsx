@@ -35,7 +35,7 @@ const Assignments = () => {
             <h1 className="text-4xl font-bold text-center  underline mb-3">All The Submited Assignments</h1>
 
             <div>
-                <h2 className="font-bold text-green-500">Assignment Quality</h2>
+                <h2 className="font-bold text-orange-500">Assignment Quality</h2>
                 <div className="my-5  flex  ">
                     <div>
                         <select id="Search-fild" name="quality" className="select rounded-none select-bordered  max-w-xs">

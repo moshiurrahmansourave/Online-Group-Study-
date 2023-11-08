@@ -54,9 +54,9 @@ const Navbar = () => {
     </div>
     <Link to="/" className="flex items-center">
     
-    <img  className="w-20 rounded-3xl " src="https://i.ibb.co/JkLMsj9/pngtree-education-school-logo-design-learning-library-knowledge-vector-png-image-12898110.png" alt="" />
+    <img  className="w-20 rounded-full " src="https://i.ibb.co/JkLMsj9/pngtree-education-school-logo-design-learning-library-knowledge-vector-png-image-12898110.png" alt="" />
     
-    <p className="text-3xl font-bold text-green-400">Study Butter</p>
+    <p className="text-3xl font-bold text-orange-400">Study Better</p>
     </Link>
     <div className="lg:mt-5 mt-4 mb-2 ml-4">
     <input type="checkbox" onChange={handleToggle} className="toggle toggle-xs" />
@@ -88,10 +88,10 @@ const Navbar = () => {
       </label>
   {
     user ? 
-    <button onClick={handleSingOut} className="btn btn-sm bg-green-500 text-white">sing Out</button>
+    <button onClick={handleSingOut} className="btn btn-sm bg-orange-500 text-white">sing Out</button>
     :
     <Link to="/login">
-    <p className="btn btn-sm bg-green-500 text-white">Login</p>
+    <p className="btn btn-sm bg-orange-500 text-white">Login</p>
     </Link>
   
   }

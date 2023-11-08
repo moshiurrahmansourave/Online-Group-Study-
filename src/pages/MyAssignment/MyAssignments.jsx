@@ -25,7 +25,7 @@ const MyAssignments = () => {
 
     return (
         <div>
-            <h1 className="text-4xl font-semibold text-center underline mb-4" >Your submitted assignments</h1>
+            <h1 className="text-4xl font-semibold text-center underline  mb-4" >Your submitted assignments</h1>
             {/* <button onClick={handleSearch} className="btn">find your assignment</button> */}
             <div>
                 {

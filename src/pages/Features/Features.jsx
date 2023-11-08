@@ -13,8 +13,8 @@ const Features = () => {
     return (
         <div>
             <div className="text-center my-6">
-                <h2 className="text-4xl font-bold ">
-                    FOR STUDENTS
+                <h2 className="text-4xl font-bold mb-6">
+                    FOR <span className="text-orange-500">STUDENTS</span>
                 </h2>
                 <p className="text-xl"> Set a regular meeting time and duration  for your group study sessions. <br /> Consistency helps everyone plan their time effectively.</p>
             </div>

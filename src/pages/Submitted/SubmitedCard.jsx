@@ -50,7 +50,7 @@ const SubmitedCard = ({assignment}) => {
 
     <div className="card-actions justify-center">
       <Link to={`/marking/${_id}`}>
-      <button className="btn btn-sm bg-green-400 text-white">Give Mark</button>
+      <button className="btn btn-sm bg-orange-400 text-white">Give Mark</button>
       </Link>
       
     </div>

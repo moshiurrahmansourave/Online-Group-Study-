@@ -46,7 +46,7 @@ const CreateAssignments = () => {
     return (
         <div>
             <div>
-                <h2 className="text-4xl font-bold text-green-400 text-center underline mb-6">Create Your Assignment</h2>
+                <h2 className="text-4xl font-bold text-orange-400 text-center underline mb-6">Create Your Assignment</h2>
             </div>
            <form onSubmit={handleCreateAssign}>
 
@@ -97,7 +97,7 @@ const CreateAssignments = () => {
            
            </div>
            <div className="flex justify-center">
-           <input type="submit" value="Create Assignment" className="btn hover:bg-green-500 hover:text-white my-3" />
+           <input type="submit" value="Create Assignment" className="btn hover:bg-orange-500 hover:text-white my-3" />
            </div>
            </form>
         </div>
