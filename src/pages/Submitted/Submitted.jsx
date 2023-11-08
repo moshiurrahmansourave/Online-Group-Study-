@@ -9,7 +9,7 @@ const Submitted = () => {
     const [searchData, setSearchData] = useState([]);
     
     useEffect(()=>{
-        fetch(`http://localhost:5000/pendingassignment/Pending`)
+        fetch(`https://group-study-assignment-11-server.vercel.app/pendingassignment/Pending`)
         .then(res => res.json())
         .then(data => setSearchData(data))
     },[])

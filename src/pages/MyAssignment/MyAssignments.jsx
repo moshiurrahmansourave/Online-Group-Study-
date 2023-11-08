@@ -14,7 +14,7 @@ const MyAssignments = () => {
     
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/myassignment/${user?.email}`)
+        fetch(`https://group-study-assignment-11-server.vercel.app/myassignment/${user?.email}`)
         .then(res => res.json())
         .then(data => setSearchData(data))
     },[fullData,user])

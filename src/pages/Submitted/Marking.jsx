@@ -19,7 +19,7 @@ const Marking = () => {
 
     const handleStatusComplete = id =>{
       console.log(id)
-      fetch(`http://localhost:5000/assignment/${id}`,{
+      fetch(`https://group-study-assignment-11-server.vercel.app/assignment/${id}`,{
         method:'PATCH',
         headers:{
           'content-type': 'application/json'

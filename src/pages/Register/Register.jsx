@@ -47,7 +47,7 @@ const Register = () => {
     return (
 
 <div>
-            <div className="lg:mb-72 mb-5 flex justify-center mt-24 ">
+            <div className="lg:mb-72 mb-5 flex-col lg:flex-row flex justify-center mt-24 ">
         <div className="card w-96 glass rounded-none ">
             <div className="p-3">
                 <div className="flex items-center justify-between">

@@ -26,7 +26,7 @@ const AssignmentsCard = ({assignment,assignments,setSearchData}) => {
         if (result.isConfirmed) {
           
 
-          fetch(`http://localhost:5000/assignment/${_id}`,{
+          fetch(`https://group-study-assignment-11-server.vercel.app/assignment/${_id}`,{
             method:'DELETE'
           })
           .then(res => res.json())

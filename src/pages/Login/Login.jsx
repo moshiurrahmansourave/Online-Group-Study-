@@ -53,7 +53,7 @@ const Login = () => {
 
     return (
         <div>
-            <div className="lg:mb-72 mb-5 flex justify-center mt-24 ">
+            <div className="lg:mb-72 mb-5 flex flex-col lg:flex-row justify-center mt-24 ">
         <div className="card w-96 glass rounded-none ">
             <div className="p-3">
                 <div className="flex items-center justify-between">
@@ -90,9 +90,9 @@ const Login = () => {
            <button onClick={handleGoogleSingIn} className=" border border-black p-3 rounded-full font-medium  mb-2 text-green-500 hover:text-white hover:bg-green-400 ">
                 <FaGoogle className='text-4xl '></FaGoogle>
             </button>
-            <button  className="border border-black p-3 rounded-full font-medium  mb-2 hover:text-white hover:bg-green-400 text-green-500">
+            {/* <button  className="border border-black p-3 rounded-full font-medium  mb-2 hover:text-white hover:bg-green-400 text-green-500">
                 <FaGithub className='text-4xl'></FaGithub>
-            </button>
+            </button> */}
             </div> 
             
             </div>

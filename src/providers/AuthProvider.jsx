@@ -36,13 +36,13 @@ const AuthProvider = ({children}) => {
             //if user exists 
             if(currentUser){
                 
-                axios.post('http://localhost:5000/jwt',loggedUser, {withCredentials:true})
+                axios.post('https://group-study-assignment-11-server.vercel.app/jwt',loggedUser, {withCredentials:true})
                 .then(res =>{
                     console.log('token response',res.data);
                 })
             }
             else{
-                axios.post('http://localhost:5000/logout',loggedUser,{
+                axios.post('https://group-study-assignment-11-server.vercel.app/logout',loggedUser,{
                     withCredentials:true
                 })
                 .then(res => {
