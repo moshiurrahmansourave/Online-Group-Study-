@@ -1,6 +1,6 @@
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import { useContext } from 'react';
-import { FaGithub, FaGoogle } from 'react-icons/fa';
+import {  FaGoogle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../providers/AuthProvider';
@@ -90,9 +90,7 @@ const Login = () => {
            <button onClick={handleGoogleSingIn} className=" border border-black p-3 rounded-full font-medium  mb-2 text-green-500 hover:text-white hover:bg-green-400 ">
                 <FaGoogle className='text-4xl '></FaGoogle>
             </button>
-            {/* <button  className="border border-black p-3 rounded-full font-medium  mb-2 hover:text-white hover:bg-green-400 text-green-500">
-                <FaGithub className='text-4xl'></FaGithub>
-            </button> */}
+            
             </div> 
             
             </div>
