@@ -16,21 +16,21 @@ const Banner = () => {
           
 
 <div className="flex lg:flex-row flex-col mb-36">
-<div className="flex gap-2 glass p-4">
+<div className="flex gap-2  duration-300 glass p-4 hover:bg-gray-900 mb-5">
             <FaAtlas className="text-5xl text-orange-500"></FaAtlas>
             <div>
               <h1 className="text-xl">5,320 online courses</h1>
               <p className="w-72">Enjoy a variety of fresh topics</p>
             </div>
           </div>
-<div className="flex gap-2 glass p-4 mx-5 ">
+<div className="flex gap-2 glass duration-300  p-4 mx-5 hover:bg-gray-900 mb-5">
             <FaChessBoard className="text-5xl text-orange-500"></FaChessBoard>
             <div>
               <h1 className="text-xl">Expert instruction</h1>
               <p className="w-72">Find the right instructor</p>
             </div>
           </div>
-<div className="flex gap-2 glass p-4">
+<div className="flex gap-2 glass duration-300  p-4 hover:bg-gray-900 mb-5">
             <FaTachometerAlt className="text-5xl text-orange-500"></FaTachometerAlt>
             <div>
               <h1 className="text-xl">Lifetime access</h1>

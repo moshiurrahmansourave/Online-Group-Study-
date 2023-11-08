@@ -5,7 +5,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
 
 
-const AssignmentsCard = ({assignment,assignments,setAssignments}) => {
+const AssignmentsCard = ({assignment,assignments,setSearchData}) => {
   const {user} = useContext(AuthContext);
     
     const {title, _id, description ,marks, imgUrl, quality,email} = assignment;
@@ -39,7 +39,7 @@ const AssignmentsCard = ({assignment,assignments,setAssignments}) => {
               'success'
           )
           const remaining = assignments.filter(cof => cof._id !== _id);
-          setAssignments(remaining);
+          setSearchData(remaining);
             }
           })
 
@@ -54,7 +54,7 @@ const AssignmentsCard = ({assignment,assignments,setAssignments}) => {
         <div>
             <div className="card flex flex-col  card-side border mb-10 rounded-2xl hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
   <figure>
-  <img className="w-96" src={imgUrl} alt="here is no image"/>
+  <img className="w-96 h-96" src={imgUrl} alt="here is no image"/>
     
     </figure>
   <div className="card-body space-y-3">

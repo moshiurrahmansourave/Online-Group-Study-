@@ -9,11 +9,12 @@ const Marking = () => {
 
 
 
-  const [searchData, setSearchData] = useState();
-    const assignment = useLoaderData(searchData);
+ 
+    const assignment = useLoaderData();
 
-    const {title,email,status, _id, description, marks, imgUrl,quality,name,pdf, date} =assignment;
-
+   
+    const [searchData, setSearchData] = useState(assignment);
+    const {title,email,status, _id, description, marks, imgUrl,quality,name,pdf, date} =searchData;
     
 
     const handleStatusComplete = id =>{

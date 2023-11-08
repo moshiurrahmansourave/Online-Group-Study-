@@ -58,7 +58,7 @@ const Navbar = () => {
     
     <p className="text-3xl font-bold text-orange-400">Study Better</p>
     </Link>
-    <div className="lg:mt-5 mt-4 mb-2 ml-4">
+    <div className="lg:mt-5 mt-4 mb-2 ml-4 hidden lg:flex">
     <input type="checkbox" onChange={handleToggle} className="toggle toggle-xs" />
     </div>
   </div>

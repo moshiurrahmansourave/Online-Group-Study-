@@ -59,6 +59,7 @@ const Assignments = () => {
                         key={assignment._id}
                         assignment={assignment}
                         assignments={assignments}
+                        setSearchData={setSearchData}
                         setAssignments={setAssignments}
                     ></AssignmentsCard>)
                 }

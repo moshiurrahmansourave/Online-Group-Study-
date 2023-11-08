@@ -37,10 +37,10 @@ const SubmitedCard = ({assignment}) => {
         <span className="font-bold underline"> {quality} </span>
         </div>
 
-        <div className="flex gap-3">
+        {/* <div className="flex gap-3">
         <h2>Description: </h2>
         <span className="font-bold underline"> {description} </span>
-        </div>
+        </div> */}
 
         <div className="flex gap-3">
         <h2>Total marks: </h2>

@@ -44,11 +44,11 @@ const CreateAssignments = () => {
     }
 
     return (
-        <div>
+        <div className="bg-[url('https://i.stack.imgur.com/90nGa.jpg')] mb-10">
             <div>
                 <h2 className="text-4xl font-bold text-orange-400 text-center underline mb-6">Create Your Assignment</h2>
             </div>
-           <form onSubmit={handleCreateAssign}>
+           <form onSubmit={handleCreateAssign} className="glass">
 
            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 border  p-4 ">
           <div className=" gap-3">
