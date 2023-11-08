@@ -12,7 +12,7 @@ const MyAssignmentCard = ({assignment}) => {
     
     return (
         <div>
-            <div className="card border mb-10 card-side rounded-2xl hover:shadow-xl  transition-all duration-300">
+            <div className="card border mb-10 card-side rounded-2xl hover:shadow-xl  transition-all duration-300 flex flex-col">
   <figure className="w-96 h-96">
   <img  src={imgUrl} alt="here is no image"/>
     
