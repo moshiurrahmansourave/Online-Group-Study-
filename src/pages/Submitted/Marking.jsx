@@ -4,7 +4,6 @@ import Swal from "sweetalert2";
 
 
 
-
 const Marking = () => {
 
 
@@ -53,11 +52,13 @@ const Marking = () => {
             <div className=" bg-base-300 ">
   <div className=" grid grid-cols-1 py-9 lg:grid-cols-2 text-xl">
     
-      <div className="card-body ">
-      <h1>status:
+      <div className=" card-body ">
+    
+    <h1>status:
         <span className="font-bold"> {status}</span>
        </h1>
-
+       
+<div className="">
 <div className="flex gap-3">
 <h2>Assignment Title: </h2>
 <span className="font-bold underline"> {title} </span>
@@ -93,6 +94,7 @@ const Marking = () => {
 <h2>Total marks: </h2>
 <span className="font-bold underline"> {marks} </span>
 </div>
+    </div>
       </div>
 
 

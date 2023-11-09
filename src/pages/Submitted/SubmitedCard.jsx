@@ -1,18 +1,19 @@
 import { Link } from "react-router-dom";
-
+import './submit.css'
 
 
 const SubmitedCard = ({assignment}) => {
    
     const {name,title,status,pdf, _id, description ,marks, imgUrl, quality,email} = assignment;
     return (
-        <div>
-            <div className="card w-96 bg-base-300 ">
-  <div className="card-body">
+        <div className="bodyCss">
+            <div className="card  bg-base-300 ">
+  <div className="upornisCard card-body">
     <h2 className="card-title"></h2>
        <h1>status : <span className="text-red-500">{status}...</span></h1>
 
-        <div className="flex gap-3">
+      <div className="upornis">
+      <div className="flex gap-3">
         <h2>Assignment Title: </h2>
         <span className="font-bold underline"> {title} </span>
         </div>
@@ -22,10 +23,7 @@ const SubmitedCard = ({assignment}) => {
         <span className="font-bold underline"> {name} </span>
         </div>
 
-        <div className="flex gap-3">
-        <h2>Assignment title: </h2>
-        <span className="font-bold underline"> {title} </span>
-        </div>
+        
         
         <div className="flex gap-3">
         <h2>Assignment pdf: </h2>
@@ -37,15 +35,12 @@ const SubmitedCard = ({assignment}) => {
         <span className="font-bold underline"> {quality} </span>
         </div>
 
-        {/* <div className="flex gap-3">
-        <h2>Description: </h2>
-        <span className="font-bold underline"> {description} </span>
-        </div> */}
 
         <div className="flex gap-3">
         <h2>Total marks: </h2>
         <span className="font-bold underline"> {marks} </span>
         </div>
+      </div>
 
 
     <div className="card-actions justify-center">
